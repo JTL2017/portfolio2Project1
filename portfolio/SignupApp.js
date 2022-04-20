@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet } from 'react-native'
-import TitleMenu from './TitleMenu';
-import Checked from './Checked';
+
 import LoginApp from './LoginApp';
 export default function SignUpApp() {
     let [signedUp, setSignedUp] = useState(false)
@@ -14,19 +13,18 @@ export default function SignUpApp() {
         if (username !== "") {
             if(password !== "")
             {
-            <>
-              
-            <LoginApp passUser = {username} password = {password}></LoginApp>
             
-            </>
             setSignedUp(true)
+            }
+            else{
+                setErrorPass(true)
             }
         }
 
     })
     if(allowed)
     {
-        return <><LoginApp></LoginApp></>
+        return <><LoginApp name = {"hello"} password = {password} username = {username}></LoginApp></>
     }
 
     return !signedUp ? <>
@@ -39,7 +37,8 @@ export default function SignUpApp() {
         <Button title="Sign Up" onPress={() => doLogin()}></Button>
     </> :
     <>
-        <Text style = {styles.title}>Welcome {username}</Text>
+        <Text style = {styles.title}>Account Created!</Text>
+        <Text>To double check, please log in using the button below!</Text>
         <Button title="Login" onPress={() => setAllowed(true)}></Button>
         </>
         //Button

@@ -8,7 +8,9 @@ export default function TitleMenu() {
 if(buttonSelect == "title")
 {
    return (
+       
 <>
+<Text style = {styles.title}>Web Application</Text>
 <Button title="SignUp" onPress={() => setButtonSelect("sign")}></Button>
 <Button title="LogIn" onPress={() => setButtonSelect("log")}></Button>
 </>
