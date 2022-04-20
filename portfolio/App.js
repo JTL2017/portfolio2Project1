@@ -1,16 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState, useCallBack } from 'react';
+import { StyleSheet, Text, Button, View, TextInput } from 'react-native';
+import LoginApp from './LoginApp';
 
 export default function App() {
+
+
   return (
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <LoginApp></LoginApp>
+
+
+
+
       <StatusBar style="auto" />
     </View>
   );
+
 }
 
 const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -18,3 +35,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
