@@ -55,7 +55,9 @@ console.log(name)
         <Text style={styles.errorStyle}>{ prompt ? "If you haven't created an account, please sign up here!" : ""}</Text>
         <Text style={styles.errorStyle}>{ prompt ? <Button title="SignUp" onPress={() => setPromptButton(true)}></Button> : ""}</Text>
     </> :
-        <Text style = {styles.title}>Welcome {username}</Text>
+    <>   <Text style = {styles.title}>Welcome {username}</Text>
+        <Text style = {styles.title}>Sign out if need be</Text>
+        </>
 }
 const styles = StyleSheet.create({
     title: {

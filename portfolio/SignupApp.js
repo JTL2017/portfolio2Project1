@@ -20,6 +20,9 @@ export default function SignUpApp() {
                 setErrorPass(true)
             }
         }
+        else{
+            setErrorUser(true)
+        }
 
     })
     if(allowed)
@@ -33,7 +36,7 @@ export default function SignUpApp() {
         <TextInput placeholder="Username" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorUser ? "A Blank Username! Try Again." : ""}</Text>
         <TextInput secureTextEntry={true} value={password} onChangeText={text => setPassword(text)} placeholder="Password" style={styles.input}></TextInput>
-        <Text style={styles.errorStyle}>{errorPass ? "Wrong Password! Try Again." : ""}</Text>
+        <Text style={styles.errorStyle}>{errorPass ? "Blank Password! Try Again." : ""}</Text>
         <Button title="Sign Up" onPress={() => doLogin()}></Button>
     </> :
     <>
