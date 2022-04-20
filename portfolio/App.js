@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState, useCallBack } from 'react';
 import { StyleSheet, Text, Button, View, TextInput } from 'react-native';
+import TitleMenu from './TitleMenu';
 import LoginApp from './LoginApp';
 
 export default function App() {
@@ -9,7 +10,8 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      <LoginApp></LoginApp>
+      
+      <TitleMenu></TitleMenu>
       
 
 
