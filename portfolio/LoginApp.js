@@ -1,15 +1,19 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet } from 'react-native'
-export default function LoginApp() {
+import SignUpApp from './SignupApp';
+export default function LoginApp({password}) {
+    
+   console.log(password)
     let [loggedIn, setloggedIn] = useState(false)
     let [username, setUsername] = useState("")
-    let [password, setPassword] = useState("")
+    let [currentPassword, setPassword] = useState("")
     let [errorPass, setErrorPass] = useState(false)
     let [errorUser, setErrorUser] = useState(false)
+    
     let doLogin = useCallback(() => {
         if (username !== "") {
 
-            if (password == "Ch@rge!") {
+            if (currentPassword == password) {
                 setloggedIn(true)
             }
             else {
@@ -27,7 +31,7 @@ export default function LoginApp() {
         <Text style={styles.title}>Welcome, please log in below!</Text>
         <TextInput placeholder="Username" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorUser ? "A Blank Username! Try Again." : ""}</Text>
-        <TextInput secureTextEntry={true} value={password} onChangeText={text => setPassword(text)} placeholder="Password" style={styles.input}></TextInput>
+        <TextInput secureTextEntry={true} value={currentPassword} onChangeText={text => setPassword(text)} placeholder="Password" style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorPass ? "Wrong Password! Try Again." : ""}</Text>
         <Button title="Login" onPress={() => doLogin()}></Button>
     </> :

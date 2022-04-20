@@ -1,28 +1,35 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet } from 'react-native'
+import TitleMenu from './TitleMenu';
+import Checked from './Checked';
+import LoginApp from './LoginApp';
 export default function SignUpApp() {
     let [signedUp, setSignedUp] = useState(false)
     let [username, setUsername] = useState("")
     let [password, setPassword] = useState("")
+    let [allowed, setAllowed] = useState(false)
     let [errorPass, setErrorPass] = useState(false)
     let [errorUser, setErrorUser] = useState(false)
     let doLogin = useCallback(() => {
         if (username !== "") {
-
-            if (password == "Ch@rge!") {
-                setSignedUp(true)
+            if(password !== "")
+            {
+            <>
+              
+            <LoginApp passUser = {username} password = {password}></LoginApp>
+            
+            </>
+            setSignedUp(true)
             }
-            else {
-                setErrorPass(true)
-            }
-        }
-        else {
-            setErrorUser(true)
         }
 
     })
+    if(allowed)
+    {
+        return <><LoginApp></LoginApp></>
+    }
 
-    return !loggedIn ? <>
+    return !signedUp ? <>
 
         <Text style={styles.title}>Welcome, please sign up!</Text>
         <TextInput placeholder="Username" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
@@ -31,7 +38,11 @@ export default function SignUpApp() {
         <Text style={styles.errorStyle}>{errorPass ? "Wrong Password! Try Again." : ""}</Text>
         <Button title="Sign Up" onPress={() => doLogin()}></Button>
     </> :
+    <>
         <Text style = {styles.title}>Welcome {username}</Text>
+        <Button title="Login" onPress={() => setAllowed(true)}></Button>
+        </>
+        //Button
 }
 const styles = StyleSheet.create({
     title: {
