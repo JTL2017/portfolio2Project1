@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet } from 'react-native'
+import ProfileApp from './ProfileApp';
 import SignUpApp from './SignupApp';
 export default function LoginApp({name, password, username}) {
     
@@ -55,8 +56,7 @@ console.log(name)
         <Text style={styles.errorStyle}>{ prompt ? "If you haven't created an account, please sign up here!" : ""}</Text>
         <Text style={styles.errorStyle}>{ prompt ? <Button title="SignUp" onPress={() => setPromptButton(true)}></Button> : ""}</Text>
     </> :
-    <>   <Text style = {styles.title}>Welcome {username}</Text>
-        <Text style = {styles.title}>Sign out if need be</Text>
+    <>  <ProfileApp username = {username}></ProfileApp>
         </>
 }
 const styles = StyleSheet.create({
