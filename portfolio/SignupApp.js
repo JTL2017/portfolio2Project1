@@ -33,9 +33,9 @@ export default function SignUpApp() {
     return !signedUp ? <>
 
         <Text style={styles.title}>Welcome, please sign up!</Text>
-        <TextInput placeholder="Username" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
+        <TextInput placeholder="Username"  placeholderTextColor="black" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorUser ? "A Blank Username! Try Again." : ""}</Text>
-        <TextInput secureTextEntry={true} value={password} onChangeText={text => setPassword(text)} placeholder="Password" style={styles.input}></TextInput>
+        <TextInput secureTextEntry={true} value={password} onChangeText={text => setPassword(text)} placeholder="Password"  placeholderTextColor="black" style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorPass ? "Blank Password! Try Again." : ""}</Text>
         <Button title="Sign Up" onPress={() => doLogin()}></Button>
     </> :

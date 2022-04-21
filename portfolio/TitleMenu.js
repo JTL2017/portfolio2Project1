@@ -18,17 +18,33 @@ if(buttonSelect == "title")
 }
 else if(buttonSelect == "log")
 {
-    return (<><LoginApp></LoginApp></>)
+    return (
+    <><LoginApp></LoginApp>
+    <Button title="Return" style = {styles.button} onPress={() => setButtonSelect("title")}></Button>
+    
+    
+    </>
+    
+    )
 }
 else if(buttonSelect == "sign")
 {
-    return (<><SignUpApp></SignUpApp></>)
+    return (<>
+    <SignUpApp></SignUpApp>
+    <Button title="Return" onPress={() => setButtonSelect("title")}></Button>
+    
+    </>)
+
 }
     
 }
 const styles = StyleSheet.create({
+
     title: {
         fontSize: 30
+    },
+    button:{
+        padding: 12
     },
     input: {
         height: 40,

@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        borderWidth: 3,
         alignItems: 'center',
         justifyContent: 'center',
     },
