@@ -1,21 +1,21 @@
 {
   "files": {
-    "app.js": "/static/js/app.418188a4.chunk.js",
-    "app.js.map": "/static/js/app.418188a4.chunk.js.map",
-    "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
-    "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.ec3910a6.chunk.js": "/static/js/2.ec3910a6.chunk.js",
-    "static/js/2.ec3910a6.chunk.js.map": "/static/js/2.ec3910a6.chunk.js.map",
-    "favicon-16.png": "/favicon-16.png",
-    "favicon-32.png": "/favicon-32.png",
-    "favicon.ico": "/favicon.ico",
-    "index.html": "/index.html",
-    "manifest.json": "/manifest.json",
-    "serve.json": "/serve.json",
-    "static/js/2.ec3910a6.chunk.js.LICENSE.txt": "/static/js/2.ec3910a6.chunk.js.LICENSE.txt"
+    "app.js": "“https://JTL2017.github.io/porfolio2Project1/static/js/app.418188a4.chunk.js",
+    "app.js.map": "“https://JTL2017.github.io/porfolio2Project1/static/js/app.418188a4.chunk.js.map",
+    "runtime~app.js": "“https://JTL2017.github.io/porfolio2Project1/static/js/runtime~app.890ab4e9.js",
+    "runtime~app.js.map": "“https://JTL2017.github.io/porfolio2Project1/static/js/runtime~app.890ab4e9.js.map",
+    "static/js/2.ec3910a6.chunk.js": "“https://JTL2017.github.io/porfolio2Project1/static/js/2.ec3910a6.chunk.js",
+    "static/js/2.ec3910a6.chunk.js.map": "“https://JTL2017.github.io/porfolio2Project1/static/js/2.ec3910a6.chunk.js.map",
+    "favicon-16.png": "“https://JTL2017.github.io/porfolio2Project1/favicon-16.png",
+    "favicon-32.png": "“https://JTL2017.github.io/porfolio2Project1/favicon-32.png",
+    "favicon.ico": "“https://JTL2017.github.io/porfolio2Project1/favicon.ico",
+    "index.html": "“https://JTL2017.github.io/porfolio2Project1/index.html",
+    "manifest.json": "“https://JTL2017.github.io/porfolio2Project1/manifest.json",
+    "serve.json": "“https://JTL2017.github.io/porfolio2Project1/serve.json",
+    "static/js/2.ec3910a6.chunk.js.LICENSE.txt": "“https://JTL2017.github.io/porfolio2Project1/static/js/2.ec3910a6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime~app.2e9f1821.js",
+    "static/js/runtime~app.890ab4e9.js",
     "static/js/2.ec3910a6.chunk.js",
     "static/js/app.418188a4.chunk.js"
   ]
