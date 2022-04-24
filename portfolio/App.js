@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,View} from 'react-native';
-import ProfileApp from './ProfileApp';
+import ProfileApp from './ArticleApp';
 import TitleMenu from './TitleMenu';
 
 
@@ -10,8 +10,8 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      {/* <TitleMenu></TitleMenu> */}
-      <ProfileApp></ProfileApp>
+      <TitleMenu></TitleMenu>
+     
       <StatusBar style="auto" />
     </View>
   );

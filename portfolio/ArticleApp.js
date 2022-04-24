@@ -2,12 +2,12 @@ import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet, View, Image } from 'react-native'
 import SignUpApp from './SignupApp';
 
-export default function ProfileApp({username})
+export default function ArticleApp({username})
 {
     let [inputText, setInputTexts] = useState("")
     let [value, setValue] = useState(false)
     let [edit, setEdit] = useState(false)
-    let addTask = useCallback(() => {
+    let addArticle = useCallback(() => {
         
         setValue(true)
         setEdit(false)
@@ -27,13 +27,13 @@ export default function ProfileApp({username})
         <>
         
         <Text style = {styles.title}>Welcome {username}</Text>
-        <Text style = {styles.title}>Article</Text>
-        <Text>Click the edit button below to edit or add to the article</Text>
-        <Text style = {styles.bio}>{value ? inputText : "-Empty Article-"}</Text>
         
-       {edit ? <Text>Change Bio: <TextInput style = {styles.input} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput></Text> : ""}
-        {edit ? <Button title="Save" onPress={addTask}></Button> : "" }
-        {value == false ? <Button title="Edit Article" onPress={editButton}></Button> : ""}
+        <Text>Click the edit button below to edit or add to the article</Text>
+       
+        
+       {edit ? <TextInput style = {styles.content} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput> : <Text style = {styles.content}>{value ? inputText : "Write article here..."}</Text>}
+        {edit ? <Button title="Save" onPress={addArticle}></Button> : "" }
+        {edit == false ? <Button title="Edit Article" onPress={editButton}></Button> : ""}
 
         
         
@@ -41,13 +41,15 @@ export default function ProfileApp({username})
     )
 }
 const styles = StyleSheet.create({
-    bio:{
+    content:{
         
-        height: 60,
+        height: 400,
         margin: 12,
         borderWidth: 3,
         padding: 10,
         fontSize: 15,
+        width: 800,
+        maxWidth: 800
     },
     title: {
         fontSize: 30,
