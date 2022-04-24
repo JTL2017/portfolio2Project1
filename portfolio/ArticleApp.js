@@ -43,7 +43,7 @@ export default function ArticleApp({username})
 const styles = StyleSheet.create({
     content:{
         
-        height: 60,
+        
         margin: 12,
         borderWidth: 3,
         padding: 10,
