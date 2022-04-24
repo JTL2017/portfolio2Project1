@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text, TextInput, StyleSheet } from 'react-native'
+import { Button, Text, View, TextInput, StyleSheet } from 'react-native'
 import LoginApp from './LoginApp';
 import SignUpApp from './SignupApp';
 export default function TitleMenu() {
@@ -10,9 +10,12 @@ if(buttonSelect == "title")
    return (
        
 <>
+<View>
+
 <Text style = {styles.title}>Web Application</Text>
-<Button title="SignUp" onPress={() => setButtonSelect("sign")}></Button>
-<Button title="LogIn" onPress={() => setButtonSelect("log")}></Button>
+<Button title="SignUp" onPress={() => setButtonSelect("sign")} style = {styles.button} ></Button>
+<Button title="LogIn" onPress={() => setButtonSelect("log")}style = {styles.button}></Button>
+</View>
 </>
    )
 }
@@ -31,6 +34,9 @@ else if(buttonSelect == "sign")
 {
     return (<>
     <SignUpApp></SignUpApp>
+    <br>
+    </br>
+    <br></br>
     <Button title="Return" onPress={() => setButtonSelect("title")}></Button>
     
     </>)
@@ -44,7 +50,12 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     button:{
-        padding: 12
+        alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
     },
     input: {
         height: 40,
