@@ -1,12 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text, TextInput, StyleSheet, View, Image, TurboModuleRegistry } from 'react-native'
+import { Button, Text, TextInput, StyleSheet, View, Image } from 'react-native'
 import SignUpApp from './SignupApp';
 
 export default function ProfileApp({username})
 {
     let [inputText, setInputTexts] = useState("")
     let [value, setValue] = useState(false)
-    let [editButton, setEditButton] = useState(true)
     let addTask = useCallback(() => {
         
         setValue(true)
@@ -20,8 +19,8 @@ export default function ProfileApp({username})
         <Text style = {styles.title}>Welcome {username}</Text>
         <Text style = {styles.bio}>{value ? inputText : "-Empty Bio-"}</Text>
         
-       {editButton ? <Text>Change Bio: <TextInput style = {styles.input} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput></Text> : ""} 
-       {editButton ?  <Button title="Change Bio" onPress={addTask}></Button> : <Button title="Edit Bio" onPress={setEditButton(false)}></Button>}
+       {value == false ? <Text>Change Bio: <TextInput style = {styles.input} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput></Text> : ""}
+        {value == false ? <Button title="Change Bio" onPress={addTask}></Button> : "" }
 
         
         </View>
