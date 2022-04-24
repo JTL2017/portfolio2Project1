@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text, TextInput, StyleSheet } from 'react-native'
+import { Button, Text, TextInput, StyleSheet, View } from 'react-native'
 
 import LoginApp from './LoginApp';
 export default function SignUpApp() {
@@ -31,6 +31,8 @@ export default function SignUpApp() {
     }
 
     return !signedUp ? <>
+        <View style = {styles.container}>
+        <View style = {styles.innercontainer}>
 
         <Text style={styles.title}>Welcome, please sign up!</Text>
         <TextInput placeholder="Username"  placeholderTextColor="black" value={username} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
@@ -38,15 +40,31 @@ export default function SignUpApp() {
         <TextInput secureTextEntry={true} value={password} onChangeText={text => setPassword(text)} placeholder="Password"  placeholderTextColor="black" style={styles.input}></TextInput>
         <Text style={styles.errorStyle}>{errorPass ? "Blank Password! Try Again." : ""}</Text>
         <Button title="Sign Up" onPress={() => doLogin()}></Button>
+        </View>
+        </View>
     </> :
     <>
+
+
+
+
+    <View style = {styles.container}>
+<View style = {styles.innercontainer}>
         <Text style = {styles.title}>Account Created!</Text>
         <Text>To double check, please log in using the button below!</Text>
         <Button title="Login" onPress={() => setAllowed(true)}></Button>
+    </View>
+</View>
+    
         </>
-        //Button
+       
 }
 const styles = StyleSheet.create({
+    innercontainer:
+    {
+      maxWidth: 350,
+      alignItems: 'center',
+    },
     title: {
         fontSize: 30
     },

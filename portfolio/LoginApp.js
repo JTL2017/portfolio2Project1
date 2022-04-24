@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text, TextInput, StyleSheet } from 'react-native'
+import { Button, Text, TextInput, StyleSheet, View } from 'react-native'
 import ProfileApp from './ProfileApp';
 import SignUpApp from './SignupApp';
 export default function LoginApp({name, password, username}) {
@@ -21,6 +21,7 @@ console.log(name)
         {
                 setPrompt(true)
         }
+
         if (currentUsername !== "") {
 
             if(currentUsername == username){
@@ -46,6 +47,7 @@ console.log(name)
     }
 
     return !loggedIn ? <>
+        <View style = {styles.container}>
 
         <Text style={styles.title}>Welcome, please log in below!</Text>
         <TextInput placeholder="Username" placeholderTextColor="black" value={currentUsername} onChangeText={text => setUsername(text)} style={styles.input}></TextInput>
@@ -55,6 +57,7 @@ console.log(name)
         <Button title="Login" onPress={() => doLogin()}></Button>
         <Text style={styles.errorStyle}>{ prompt ? "If you haven't created an account, please sign up here!" : ""}</Text>
         <Text style={styles.errorStyle}>{ prompt ? <Button title="SignUp" onPress={() => setPromptButton(true)}></Button> : ""}</Text>
+        </View>
     </> :
     <>  <ProfileApp username = {username}></ProfileApp>
         </>

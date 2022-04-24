@@ -10,9 +10,10 @@ if(buttonSelect == "title")
    return (
        
 <>
-<View>
+<View style = {styles.container}>
 
-<Text style = {styles.title}>Web Application</Text>
+<Text style = {styles.title}> Profile Web Application</Text>
+<Text> Please sign up or log in below to enter your profile!</Text>
 <Button title="SignUp" onPress={() => setButtonSelect("sign")} style = {styles.button} ></Button>
 <Button title="LogIn" onPress={() => setButtonSelect("log")}style = {styles.button}></Button>
 </View>

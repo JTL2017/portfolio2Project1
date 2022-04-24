@@ -9,7 +9,8 @@ export default function ProfileApp({username})
         <View style = {styles.container}>
        
         <Text style = {styles.title}>Welcome {username}</Text>
-        <Text style = {styles.bio}>This Bio is used for someone to share their own biography.</Text>
+        <Text style = {styles.bio}>This bio or other information can be used to </Text>
+        
         </View>
         
     )
