@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/portfolio2Project1/static/js/app.e49b0e4a.chunk.js",
-    "app.js.map": "/portfolio2Project1/static/js/app.e49b0e4a.chunk.js.map",
+    "app.js": "/portfolio2Project1/static/js/app.7c009309.chunk.js",
+    "app.js.map": "/portfolio2Project1/static/js/app.7c009309.chunk.js.map",
     "runtime~app.js": "/portfolio2Project1/static/js/runtime~app.54d9a8cd.js",
     "runtime~app.js.map": "/portfolio2Project1/static/js/runtime~app.54d9a8cd.js.map",
-    "static/js/2.ec3910a6.chunk.js": "/portfolio2Project1/static/js/2.ec3910a6.chunk.js",
-    "static/js/2.ec3910a6.chunk.js.map": "/portfolio2Project1/static/js/2.ec3910a6.chunk.js.map",
+    "static/js/2.ed2e9b6a.chunk.js": "/portfolio2Project1/static/js/2.ed2e9b6a.chunk.js",
+    "static/js/2.ed2e9b6a.chunk.js.map": "/portfolio2Project1/static/js/2.ed2e9b6a.chunk.js.map",
     "favicon-16.png": "/portfolio2Project1/favicon-16.png",
     "favicon-32.png": "/portfolio2Project1/favicon-32.png",
     "favicon.ico": "/portfolio2Project1/favicon.ico",
     "index.html": "/portfolio2Project1/index.html",
     "manifest.json": "/portfolio2Project1/manifest.json",
     "serve.json": "/portfolio2Project1/serve.json",
-    "static/js/2.ec3910a6.chunk.js.LICENSE.txt": "/portfolio2Project1/static/js/2.ec3910a6.chunk.js.LICENSE.txt"
+    "static/js/2.ed2e9b6a.chunk.js.LICENSE.txt": "/portfolio2Project1/static/js/2.ed2e9b6a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.54d9a8cd.js",
-    "static/js/2.ec3910a6.chunk.js",
-    "static/js/app.e49b0e4a.chunk.js"
+    "static/js/2.ed2e9b6a.chunk.js",
+    "static/js/app.7c009309.chunk.js"
   ]
 }
