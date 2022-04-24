@@ -6,25 +6,38 @@ export default function ProfileApp({username})
 {
     let [inputText, setInputTexts] = useState("")
     let [value, setValue] = useState(false)
+    let [edit, setEdit] = useState(false)
     let addTask = useCallback(() => {
         
         setValue(true)
+        setEdit(false)
         console.log(inputText)
+        
+        
+    })
+    let editButton = useCallback(() => {
+        
+        console.log(inputText)
+        setEdit(true)
+        setValue(true)
         
     })
 
     return (
+        <>
         
-        <View style = {styles.container}>
         <Text style = {styles.title}>Welcome {username}</Text>
-        <Text style = {styles.bio}>{value ? inputText : "-Empty Bio-"}</Text>
+        <Text style = {styles.title}>Article</Text>
+        <Text>Click the edit button below to edit or add to the article</Text>
+        <Text style = {styles.bio}>{value ? inputText : "-Empty Article-"}</Text>
         
-       {value == false ? <Text>Change Bio: <TextInput style = {styles.input} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput></Text> : ""}
-        {value == false ? <Button title="Change Bio" onPress={addTask}></Button> : "" }
+       {edit ? <Text>Change Bio: <TextInput style = {styles.input} onChangeText = {newText => setInputTexts(newText)} defaultValue = {inputText}></TextInput></Text> : ""}
+        {edit ? <Button title="Save" onPress={addTask}></Button> : "" }
+        {value == false ? <Button title="Edit Article" onPress={editButton}></Button> : ""}
 
         
-        </View>
         
+        </>
     )
 }
 const styles = StyleSheet.create({
