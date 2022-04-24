@@ -34,9 +34,6 @@ else if(buttonSelect == "sign")
 {
     return (<>
     <SignUpApp></SignUpApp>
-    <br>
-    </br>
-    <br></br>
     <Button title="Return" onPress={() => setButtonSelect("title")}></Button>
     
     </>)
