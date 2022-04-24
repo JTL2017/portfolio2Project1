@@ -1,8 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState, useCallBack } from 'react';
-import { StyleSheet, Text, Button, View, TextInput } from 'react-native';
+import { StyleSheet,View} from 'react-native';
 import TitleMenu from './TitleMenu';
-import LoginApp from './LoginApp';
+
 
 export default function App() {
 
