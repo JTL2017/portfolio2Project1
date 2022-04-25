@@ -2,11 +2,10 @@ import React, { useCallback, useState } from 'react';
 import { Button, Text, TextInput, StyleSheet, View } from 'react-native'
 import ArticleApp from './ArticleApp';
 import SignUpApp from './SignupApp';
-export default function LoginApp({name, password, username}) {
+export default function LoginApp({ password, username}) {
     
-console.log(password)
-console.log(username)
-console.log(name)
+
+
     let [loggedIn, setloggedIn] = useState(false)
     let [currentUsername, setUsername] = useState("")
     let [currentPassword, setPassword] = useState("")

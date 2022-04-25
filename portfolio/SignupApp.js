@@ -27,7 +27,7 @@ export default function SignUpApp() {
     })
     if(allowed)
     {
-        return <><LoginApp name = {"hello"} password = {password} username = {username}></LoginApp></>
+        return <><LoginApp password = {password} username = {username}></LoginApp></>
     }
 
     return !signedUp ? <>
