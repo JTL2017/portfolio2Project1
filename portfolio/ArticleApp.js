@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text, TextInput, StyleSheet, View, Image } from 'react-native'
+import { Button, Text, TextInput, StyleSheet} from 'react-native'
 import SignUpApp from './SignupApp';
 
 export default function ArticleApp({username})
