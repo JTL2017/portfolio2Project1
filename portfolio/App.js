@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,View} from 'react-native';
-import ProfileApp from './ArticleApp';
 import TitleMenu from './TitleMenu';
 
 
@@ -28,7 +27,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-   // backgroundColor:'gray',
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
