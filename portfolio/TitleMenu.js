@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Text, View, TextInput, StyleSheet } from 'react-native'
+import { Button, Text, View, StyleSheet } from 'react-native'
 import LoginApp from './LoginApp';
 import SignUpApp from './SignupApp';
 export default function TitleMenu() {
@@ -54,18 +54,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    },
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 3,
-        padding: 10,
-        fontSize: 20,
-
-    },
-    errorStyle: {
-        color: "red",
-
     },
     container: {
         flex: 1,

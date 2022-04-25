@@ -18,13 +18,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-
-  },
   container: {
     flex: 1,
     borderWidth: 1,
